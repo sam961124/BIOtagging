@@ -1,4 +1,7 @@
 //package ckiptest;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,12 +12,36 @@ import tw.cheyingwu.ckip.Term;
 import tw.cheyingwu.ckip.WordSegmentationService;
  
 public class CkipTest {
+	 public static String readFile(String FileName) throws IOException {
+		 BufferedReader br = new BufferedReader(new FileReader(FileName));
+		 try {
+			 StringBuilder sb = new StringBuilder();
+			 String line = br.readLine();
+			 while(line != null )
+			 {
+				sb.append(line);
+				sb.append("\n");
+				line = br.readLine();
+			 }
+			 return sb.toString();
+		 } finally{
+			 br.close();
+		 }
+
+	 }
 	 public static void main(String[] args) {
 	        WordSegmentationService c; //宣告一個class變數c
 	        ArrayList<String> inputList = new ArrayList<>(); //宣告動態陣列 存切詞的name
-	        ArrayList<String> TagList = new ArrayList<>();   //宣告動態陣列 存切詞的詞性
-	        String s = "大陸公安部昨公布肯亞案情後，引爆大陸網民不滿情緒，大陸各大網站、論壇罵聲不斷，直言「台灣最美的風景是騙人」";
-	         
+	        ArrayList<String> TagList = new ArrayList<>();   //宣告動態陣列 存切詞的詞性i
+			String s = new String();
+	        System.out.println("**********     讀入資源字串    **********");
+			try {
+				s = readFile("resource/input.txt");
+			}
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.out.print(s);
 	        System.out.println("********** 使用中研院斷詞伺服器 *********");
 	         
 	        c = new CKIP( "140.109.19.104" , 1501, "willy2721", "ckip0429"); //輸入申請的IP、port、帳號、密碼
@@ -36,19 +63,19 @@ public class CkipTest {
 	            {
 	                bw.write(TagList.get(i)+"\t");
 	                if(i != 0)
-	                	bw.write("w[-1]=" + inputList.get(i-1) + " ");
+	                	bw.write("w[-1]=" + inputList.get(i-1) + "	");
 	                bw.write("w[0]=" + inputList.get(i));
 	                if(i != inputList.size()-1)
-	                	bw.write(" w[1]=" + inputList.get(i+1) + " ");
+	                	bw.write("	w[1]=" + inputList.get(i+1) + "	");
 	                if(i != 0)
-	                	bw.write("pos[-1]=" + TagList.get(i-1) + " ");
+	                	bw.write("pos[-1]=" + TagList.get(i-1) + "	");
 	                bw.write("pos[0]=" + TagList.get(i));
 	                if(i != inputList.size()-1)
-	                	bw.write(" pos[1]=" + TagList.get(i+1));
+	                	bw.write("	pos[1]=" + TagList.get(i+1));
 	                if(i == 0)
-	                	bw.write(" __BOS__");
-	                else if (i == inputList.size()-1)
-	                	bw.write(" __EOS__");
+	                	bw.write("	__BOS__");
+	                else if (i == inputList.size()-1 || inputList.get(i).equals("。") )
+	                	bw.write("	__EOS__");
 	                bw.newLine();
 	            }
 	            bw.close();

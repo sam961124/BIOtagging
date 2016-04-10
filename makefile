@@ -7,3 +7,5 @@ clean:
 run:
 	java -cp lib CkipTest
 	cat result/output.txt
+move:
+	cp result/output.txt ../crfsuite-0.12/chinese_pos
