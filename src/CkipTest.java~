@@ -63,7 +63,7 @@ for( int j = 0; j < 5; j++){
 	         
 	        //將資料output成檔案
 	        try {
-	            FileWriter fr1 = new FileWriter("result/output_"+j+".txt");
+	            FileWriter fr1 = new FileWriter("result/output"+j+".txt");
 	            BufferedWriter bw = new BufferedWriter(fr1);
 	            for(int i=0;i<inputList.size();i++)
 	            {
