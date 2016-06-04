@@ -1,0 +1,32 @@
+O-Nv	w[0]=冷凍	w[1]=治療	pos[0]=Nv	pos[1]=N	bio[0]=O	bio[1]=O		__BOS__
+O-N	w[-1]=冷凍	w[0]=治療	w[1]=後	pos[-1]=Nv	pos[0]=N	pos[1]=POST	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-POST	w[-1]=治療	w[0]=後	w[1]=，	pos[-1]=N	pos[0]=POST	pos[1]=COMMACATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-COMMACATEGORY	w[-1]=後	w[0]=，	w[1]=起	pos[-1]=POST	pos[0]=COMMACATEGORY	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=，	w[0]=起	w[1]=約	pos[-1]=COMMACATEGORY	pos[0]=Vt	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=起	w[0]=約	w[1]=一	pos[-1]=Vt	pos[0]=ADV	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-DET	w[-1]=約	w[0]=一	w[1]=公分	pos[-1]=ADV	pos[0]=DET	pos[1]=M	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-M	w[-1]=一	w[0]=公分	w[1]=的	pos[-1]=DET	pos[0]=M	pos[1]=T	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-T	w[-1]=公分	w[0]=的	w[1]=水泡	pos[-1]=M	pos[0]=T	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=B	
+B-N	w[-1]=的	w[0]=水泡	w[1]=，	pos[-1]=T	pos[0]=N	pos[1]=COMMACATEGORY	bio[-1]=O	bio[0]=B	bio[1]=O	
+O-COMMACATEGORY	w[-1]=水泡	w[0]=，	w[1]=以	pos[-1]=N	pos[0]=COMMACATEGORY	pos[1]=C	bio[-1]=B	bio[0]=O	bio[1]=O	
+O-C	w[-1]=，	w[0]=以	w[1]=經	pos[-1]=COMMACATEGORY	pos[0]=C	pos[1]=P	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-P	w[-1]=以	w[0]=經	w[1]=破	pos[-1]=C	pos[0]=P	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=經	w[0]=破	w[1]=了	pos[-1]=P	pos[0]=Vt	pos[1]=T	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-T	w[-1]=破	w[0]=了	w[1]=，	pos[-1]=Vt	pos[0]=T	pos[1]=COMMACATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-COMMACATEGORY	w[-1]=了	w[0]=，	w[1]=何時	pos[-1]=T	pos[0]=COMMACATEGORY	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-N	w[-1]=，	w[0]=何時	w[1]=整	pos[-1]=COMMACATEGORY	pos[0]=N	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-DET	w[-1]=何時	w[0]=整	w[1]=塊	pos[-1]=N	pos[0]=DET	pos[1]=M	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-M	w[-1]=整	w[0]=塊	w[1]=水泡	pos[-1]=DET	pos[0]=M	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+B-N	w[-1]=塊	w[0]=水泡	w[1]=的	pos[-1]=M	pos[0]=N	pos[1]=T	bio[-1]=O	bio[0]=B	bio[1]=O	
+O-T	w[-1]=水泡	w[0]=的	w[1]=皮	pos[-1]=N	pos[0]=T	pos[1]=N	bio[-1]=B	bio[0]=O	bio[1]=O	
+O-N	w[-1]=的	w[0]=皮	w[1]=才	pos[-1]=T	pos[0]=N	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=皮	w[0]=才	w[1]=會	pos[-1]=N	pos[0]=ADV	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=才	w[0]=會	w[1]=脫落	pos[-1]=ADV	pos[0]=ADV	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=會	w[0]=脫落	w[1]=？	pos[-1]=ADV	pos[0]=Vi	pos[1]=QUESTIONCATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-QUESTIONCATEGORY	w[-1]=脫落	w[0]=？	w[1]=已經	pos[-1]=Vi	pos[0]=QUESTIONCATEGORY	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=？	w[0]=已經	w[1]=快	pos[-1]=QUESTIONCATEGORY	pos[0]=ADV	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=已經	w[0]=快	w[1]=兩	pos[-1]=ADV	pos[0]=Vi	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-DET	w[-1]=快	w[0]=兩	w[1]=個	pos[-1]=Vi	pos[0]=DET	pos[1]=M	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-M	w[-1]=兩	w[0]=個	w[1]=禮拜	pos[-1]=DET	pos[0]=M	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-N	w[-1]=個	w[0]=禮拜	w[1]=了	pos[-1]=M	pos[0]=N	pos[1]=T	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-T	w[-1]=禮拜	w[0]=了	pos[-1]=N	pos[0]=T	bio[-1]=O	bio[0]=O		__EOS__

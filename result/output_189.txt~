@@ -1,0 +1,25 @@
+O-N	w[0]=鼻子	w[1]=裡面	pos[0]=N	pos[1]=N	bio[0]=O	bio[1]=O		__BOS__
+O-N	w[-1]=鼻子	w[0]=裡面	w[1]=有	pos[-1]=N	pos[0]=N	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=裡面	w[0]=有	w[1]=痘痘	pos[-1]=N	pos[0]=Vt	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=B	
+B-N	w[-1]=有	w[0]=痘痘	w[1]=那	pos[-1]=Vt	pos[0]=N	pos[1]=DET	bio[-1]=O	bio[0]=B	bio[1]=O	
+O-DET	w[-1]=痘痘	w[0]=那	w[1]=個	pos[-1]=N	pos[0]=DET	pos[1]=M	bio[-1]=B	bio[0]=O	bio[1]=O	
+O-M	w[-1]=那	w[0]=個	w[1]=壓	pos[-1]=DET	pos[0]=M	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=個	w[0]=壓	w[1]=了	pos[-1]=M	pos[0]=Vt	pos[1]=ASP	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ASP	w[-1]=壓	w[0]=了	w[1]=會	pos[-1]=Vt	pos[0]=ASP	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=了	w[0]=會	w[1]=痛	pos[-1]=ASP	pos[0]=ADV	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=會	w[0]=痛	w[1]=要	pos[-1]=ADV	pos[0]=Vi	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=痛	w[0]=要	w[1]=怎麼樣	pos[-1]=Vi	pos[0]=ADV	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=要	w[0]=怎麼樣	w[1]=痘痘	pos[-1]=ADV	pos[0]=Vi	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=B	
+B-N	w[-1]=怎麼樣	w[0]=痘痘	w[1]=才	pos[-1]=Vi	pos[0]=N	pos[1]=ADV	bio[-1]=O	bio[0]=B	bio[1]=O	
+O-ADV	w[-1]=痘痘	w[0]=才	w[1]=會	pos[-1]=N	pos[0]=ADV	pos[1]=ADV	bio[-1]=B	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=才	w[0]=會	w[1]=消掉	pos[-1]=ADV	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=會	w[0]=消掉	w[1]=沒有	pos[-1]=ADV	pos[0]=Vt	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=消掉	w[0]=沒有	w[1]=膿	pos[-1]=Vt	pos[0]=Vt	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=B	
+B-N	w[-1]=沒有	w[0]=膿	w[1]=但	pos[-1]=Vt	pos[0]=N	pos[1]=C	bio[-1]=O	bio[0]=B	bio[1]=O	
+O-C	w[-1]=膿	w[0]=但	w[1]=壓	pos[-1]=N	pos[0]=C	pos[1]=Vt	bio[-1]=B	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=但	w[0]=壓	w[1]=起來	pos[-1]=C	pos[0]=Vt	pos[1]=ASP	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ASP	w[-1]=壓	w[0]=起來	w[1]=感覺	pos[-1]=Vt	pos[0]=ASP	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-N	w[-1]=起來	w[0]=感覺	w[1]=硬硬	pos[-1]=ASP	pos[0]=N	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=感覺	w[0]=硬硬	w[1]=圓圓	pos[-1]=N	pos[0]=Vi	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=	
+O-Vi	w[-1]=硬硬	w[0]=圓圓	w[1]=的	pos[-1]=Vi	pos[0]=Vi	pos[1]=T	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-T	w[-1]=圓圓	w[0]=的	pos[-1]=Vi	pos[0]=T	bio[-1]=O	bio[0]=O		__EOS__

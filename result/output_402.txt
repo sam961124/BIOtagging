@@ -1,0 +1,21 @@
+O-P	w[0]=在	w[1]=外陰部	pos[0]=P	pos[1]=N	bio[0]=O	bio[1]=O	__BOS__
+O-N	w[-1]=在	w[0]=外陰部	w[1]=確	pos[-1]=P	pos[0]=N	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O
+O-ADV	w[-1]=外陰部	w[0]=確	w[1]=診	pos[-1]=N	pos[0]=ADV	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O
+O-N	w[-1]=確	w[0]=診	w[1]=有	pos[-1]=ADV	pos[0]=N	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O
+O-Vt	w[-1]=診	w[0]=有	w[1]=菜花	pos[-1]=N	pos[0]=Vt	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=B
+B-N	w[-1]=有	w[0]=菜花	w[1]=但是	pos[-1]=Vt	pos[0]=N	pos[1]=C	bio[-1]=O	bio[0]=B	bio[1]=O
+O-C	w[-1]=菜花	w[0]=但是	w[1]=陰道	pos[-1]=N	pos[0]=C	pos[1]=N	bio[-1]=B	bio[0]=O	bio[1]=O
+O-N	w[-1]=但是	w[0]=陰道	w[1]=裡面	pos[-1]=C	pos[0]=N	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O
+O-N	w[-1]=陰道	w[0]=裡面	w[1]=好像	pos[-1]=N	pos[0]=N	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O
+O-ADV	w[-1]=裡面	w[0]=好像	w[1]=也	pos[-1]=N	pos[0]=ADV	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O
+O-ADV	w[-1]=好像	w[0]=也	w[1]=有	pos[-1]=ADV	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O
+O-Vt	w[-1]=也	w[0]=有	w[1]=那	pos[-1]=ADV	pos[0]=Vt	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O
+O-DET	w[-1]=有	w[0]=那	w[1]=我	pos[-1]=Vt	pos[0]=DET	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O
+O-N	w[-1]=那	w[0]=我	w[1]=是	pos[-1]=DET	pos[0]=N	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O
+O-Vt	w[-1]=我	w[0]=是	w[1]=該	pos[-1]=N	pos[0]=Vt	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O
+O-ADV	w[-1]=是	w[0]=該	w[1]=掛	pos[-1]=Vt	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O
+O-Vt	w[-1]=該	w[0]=掛	w[1]=泌尿科	pos[-1]=ADV	pos[0]=Vt	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O
+O-N	w[-1]=掛	w[0]=泌尿科	w[1]=還是	pos[-1]=Vt	pos[0]=N	pos[1]=C	bio[-1]=O	bio[0]=O	bio[1]=O
+O-C	w[-1]=泌尿科	w[0]=還是	w[1]=婦產科	pos[-1]=N	pos[0]=C	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O
+O-N	w[-1]=還是	w[0]=婦產科	w[1]=?	pos[-1]=C	pos[0]=N	pos[1]=QUESTIONCATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O
+O-QUESTIONCATEGORY	w[-1]=婦產科	w[0]=?	pos[-1]=N	pos[0]=QUESTIONCATEGORY	bio[-1]=O	bio[0]=O	__EOS__

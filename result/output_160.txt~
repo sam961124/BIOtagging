@@ -1,0 +1,33 @@
+O-N	w[0]=內	w[1]=嘴唇	pos[0]=N	pos[1]=N	bio[0]=O	bio[1]=O		__BOS__
+O-N	w[-1]=內	w[0]=嘴唇	w[1]=之前	pos[-1]=N	pos[0]=N	pos[1]=POST	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-POST	w[-1]=嘴唇	w[0]=之前	w[1]=車禍	pos[-1]=N	pos[0]=POST	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-N	w[-1]=之前	w[0]=車禍	w[1]=不	pos[-1]=POST	pos[0]=N	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=車禍	w[0]=不	w[1]=甚	pos[-1]=N	pos[0]=ADV	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=不	w[0]=甚	w[1]=咬到	pos[-1]=ADV	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=甚	w[0]=咬到	w[1]=，	pos[-1]=ADV	pos[0]=Vt	pos[1]=COMMACATEGORY	bio[-1]=O	bio[0]=	bio[1]=O	
+O-COMMACATEGORY	w[-1]=咬到	w[0]=，	w[1]=已	pos[-1]=Vt	pos[0]=COMMACATEGORY	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=，	w[0]=已	w[1]=增生	pos[-1]=COMMACATEGORY	pos[0]=ADV	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=已	w[0]=增生	w[1]=一	pos[-1]=ADV	pos[0]=Vi	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-DET	w[-1]=增生	w[0]=一	w[1]=塊	pos[-1]=Vi	pos[0]=DET	pos[1]=M	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-M	w[-1]=一	w[0]=塊	w[1]=肉	pos[-1]=DET	pos[0]=M	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-N	w[-1]=塊	w[0]=肉	w[1]=出來	pos[-1]=M	pos[0]=N	pos[1]=Vi	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vi	w[-1]=肉	w[0]=出來	w[1]=，	pos[-1]=N	pos[0]=Vi	pos[1]=COMMACATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-COMMACATEGORY	w[-1]=出來	w[0]=，	w[1]=經常	pos[-1]=Vi	pos[0]=COMMACATEGORY	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=，	w[0]=經常	w[1]=吃	pos[-1]=COMMACATEGORY	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=經常	w[0]=吃	w[1]=東西	pos[-1]=ADV	pos[0]=Vt	pos[1]=N	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-N	w[-1]=吃	w[0]=東西	w[1]=會	pos[-1]=Vt	pos[0]=N	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=東西	w[0]=會	w[1]=不	pos[-1]=N	pos[0]=ADV	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=會	w[0]=不	w[1]=小心	pos[-1]=ADV	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=不	w[0]=小心	w[1]=咬到	pos[-1]=ADV	pos[0]=Vt	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=小心	w[0]=咬到	w[1]=。	pos[-1]=Vt	pos[0]=Vt	pos[1]=PERIODCATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-PERIODCATEGORY	w[-1]=咬到	w[0]=。	w[1]=請問	pos[-1]=Vt	pos[0]=PERIODCATEGORY	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O		__EOS__
+O-Vt	w[-1]=。	w[0]=請問	w[1]=要	pos[-1]=PERIODCATEGORY	pos[0]=Vt	pos[1]=ADV	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-ADV	w[-1]=請問	w[0]=要	w[1]=看	pos[-1]=Vt	pos[0]=ADV	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=要	w[0]=看	w[1]=哪	pos[-1]=ADV	pos[0]=Vt	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-DET	w[-1]=看	w[0]=哪	w[1]=一	pos[-1]=Vt	pos[0]=DET	pos[1]=DET	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-DET	w[-1]=哪	w[0]=一	w[1]=科	pos[-1]=DET	pos[0]=DET	pos[1]=M	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-M	w[-1]=一	w[0]=科	w[1]=處理	pos[-1]=DET	pos[0]=M	pos[1]=Nv	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Nv	w[-1]=科	w[0]=處理	w[1]=?	pos[-1]=M	pos[0]=Nv	pos[1]=QUESTIONCATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-QUESTIONCATEGORY	w[-1]=處理	w[0]=?	w[1]=?	pos[-1]=Nv	pos[0]=QUESTIONCATEGORY	pos[1]=QUESTIONCATEGORY	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-QUESTIONCATEGORY	w[-1]=?	w[0]=?	w[1]=謝謝	pos[-1]=QUESTIONCATEGORY	pos[0]=QUESTIONCATEGORY	pos[1]=Vt	bio[-1]=O	bio[0]=O	bio[1]=O	
+O-Vt	w[-1]=?	w[0]=謝謝	pos[-1]=QUESTIONCATEGORY	pos[0]=Vt	bio[-1]=O	bio[0]=O		__EOS__

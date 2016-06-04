@@ -25,7 +25,7 @@ public class CkipTest {
 
 	 }
 	 public static void main(String[] args) {
-for( int j = 0; j < 5; j++){
+for( int j = 402; j < 421; j++){
 	        WordSegmentationService c; //宣告一個class變數c
 	        ArrayList<String> inputList = new ArrayList<>(); //宣告動態陣列 存切詞的name
 	        ArrayList<String> TagList = new ArrayList<>();   //宣告動態陣列 存切詞的詞性i
@@ -40,11 +40,10 @@ for( int j = 0; j < 5; j++){
 			System.out.print(s);
 	        System.out.println("********** 使用中研院斷詞伺服器 *********");
 	         
-	        c = new CKIP( "140.109.19.104" , 1501, "willy2721", "ckip0429"); //輸入申請的IP、port、帳號、密碼
+	        c = new CKIP( "140.109.19.104" , 1502, "sam961124", "sam961103"); //輸入申請的IP、port、帳號、密碼
 	         
 	        c.setRawText(s);
 	        c.send(); //傳送至中研院斷詞系統服務使用
-	         
 	        for (Term t : c.getTerm()) {
 	           
 	            inputList.add(t.getTerm()); // t.getTerm()會讀到斷詞的String，將其存到inputList陣列
@@ -57,7 +56,7 @@ for( int j = 0; j < 5; j++){
 		    System.out.print(inputList.get(i)+'\n');
                     try{
  		    	input = cin.readLine();
-			BIOList.add(input);
+			BIOList.add(input.toUpperCase());
   		    }catch(IOException ex){}
 		}
 	         
@@ -82,11 +81,11 @@ for( int j = 0; j < 5; j++){
 	                	bw.write("bio[-1]=" + BIOList.get(i-1) + "\t");
 	                bw.write("bio[0]=" + BIOList.get(i) + "\t");
 	                if(i != inputList.size()-1)
-	                	bw.write("bio[1]=" + BIOList.get(i+1) + "\t");
+	                	bw.write("bio[1]=" + BIOList.get(i+1));
 	                if(i == 0)
-	                	bw.write("	__BOS__");
+	                	bw.write("\t__BOS__");
 	                else if (i == inputList.size()-1 || inputList.get(i).equals("。") )
-	                	bw.write("	__EOS__");
+	                	bw.write("__EOS__");
 	                bw.newLine();
 	            }
 	            bw.close();
