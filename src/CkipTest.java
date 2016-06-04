@@ -25,7 +25,7 @@ public class CkipTest {
 
 	 }
 	 public static void main(String[] args) {
-for( int j = 402; j < 421; j++){
+for( int j = 412; j < 421; j++){
 	        WordSegmentationService c; //宣告一個class變數c
 	        ArrayList<String> inputList = new ArrayList<>(); //宣告動態陣列 存切詞的name
 	        ArrayList<String> TagList = new ArrayList<>();   //宣告動態陣列 存切詞的詞性i
@@ -56,6 +56,14 @@ for( int j = 402; j < 421; j++){
 		    System.out.print(inputList.get(i)+'\n');
                     try{
  		    	input = cin.readLine();
+			if(input.isEmpty())
+			    input = "o";
+			else if(input.equals("x"))
+			{
+			    i-=2;
+			    BIOList.remove(BIOList.size()-1);
+			    continue;
+			}
 			BIOList.add(input.toUpperCase());
   		    }catch(IOException ex){}
 		}
