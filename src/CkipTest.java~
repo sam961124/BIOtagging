@@ -25,14 +25,16 @@ public class CkipTest {
 
 	 }
 	 public static void main(String[] args) {
-for( int j = 409; j < 421; j++){
+int j =0;
+for(File docFile : new File("resource/").listFiles()){
+j++;
 	        WordSegmentationService c; //宣告一個class變數c
 	        ArrayList<String> inputList = new ArrayList<>(); //宣告動態陣列 存切詞的name
 	        ArrayList<String> TagList = new ArrayList<>();   //宣告動態陣列 存切詞的詞性i
 			String s = new String();
 	        System.out.println("**********     讀入資源字串    **********");
 			try {
-				s = readFile("resource/mohw_"+j+".txt");
+				s = readFile(docFile.getAbsolutePath());
 			}
 			catch (IOException e) {
 				e.printStackTrace();
@@ -52,25 +54,34 @@ for( int j = 409; j < 421; j++){
 		BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));
 		String input;
 		ArrayList<String> BIOList = new ArrayList<>();
+		ArrayList<String> BodyList = new ArrayList<>();
 		for (int i=0;i<inputList.size();i++) {
 		    System.out.print(inputList.get(i)+'\n');
                     try{
  		    	input = cin.readLine();
 			if(input.isEmpty())
+			{
 			    input = "o";
+			    BIOList.add(input.toUpperCase());
+  		            BodyList.add(input.toUpperCase());
+			    continue;
+			}
 			else if(input.equals("x"))
 			{
 			    i-=2;
 			    BIOList.remove(BIOList.size()-1);
+			    BodyList.remove(BodyList.size()-1);
 			    continue;
 			}
 			BIOList.add(input.toUpperCase());
+			input = cin.readLine();
+  			BodyList.add(input.toUpperCase());
   		    }catch(IOException ex){}
 		}
 	         
 	        //將資料output成檔案
 	        try {
-	            FileWriter fr1 = new FileWriter("result/output_"+j+".txt");
+	            FileWriter fr1 = new FileWriter("result/sean_s_"+j+".txt");
 	            BufferedWriter bw = new BufferedWriter(fr1);
 	            for(int i=0;i<inputList.size();i++)
 	            {
@@ -85,13 +96,8 @@ for( int j = 409; j < 421; j++){
 	                bw.write("pos[0]=" + TagList.get(i) + "\t");
 	                if(i != inputList.size()-1)
 	                	bw.write("pos[1]=" + TagList.get(i+1) + "\t");
-			if(i != 0)
-	                	bw.write("bio[-1]=" + BIOList.get(i-1) + "\t");
-	                bw.write("bio[0]=" + BIOList.get(i) + "\t");
-	                if(i != inputList.size()-1)
-	                	bw.write("bio[1]=" + BIOList.get(i+1));
 	                if(i == 0)
-	                	bw.write("\t__BOS__");
+	                	bw.write("__BOS__");
 	                else if (i == inputList.size()-1 || inputList.get(i).equals("。") )
 	                	bw.write("__EOS__");
 	                bw.newLine();
@@ -103,7 +109,36 @@ for( int j = 409; j < 421; j++){
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	        }
-	         
+	         try {
+	            FileWriter fr1 = new FileWriter("result/body/sean_b_"+j+".txt");
+	            BufferedWriter bw = new BufferedWriter(fr1);
+	            for(int i=0;i<inputList.size();i++)
+	            {
+	                bw.write(BodyList.get(i) + "-" + TagList.get(i)+"\t");
+	                if(i != 0)
+	                	bw.write("w[-1]=" + inputList.get(i-1) + "\t");
+	                bw.write("w[0]=" + inputList.get(i) + "\t");
+	                if(i != inputList.size()-1)
+	                	bw.write("w[1]=" + inputList.get(i+1) + "\t");
+	                if(i != 0)
+	                	bw.write("pos[-1]=" + TagList.get(i-1) + "\t");
+	                bw.write("pos[0]=" + TagList.get(i) + "\t");
+	                if(i != inputList.size()-1)
+	                	bw.write("pos[1]=" + TagList.get(i+1) + "\t");
+	                if(i == 0)
+	                	bw.write("__BOS__");
+	                else if (i == inputList.size()-1 || inputList.get(i).equals("。") )
+	                	bw.write("__EOS__");
+	                bw.newLine();
+	            }
+	            bw.close();
+	             
+	             
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
 	    }
+
 }
 }
