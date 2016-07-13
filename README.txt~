@@ -13,7 +13,4 @@ Instruction
 
 ex.痛 enter "B", press enter, enter "O"
 4.If you make a mistake, enter "x" to go back.
-5.If you close the terminal but you haven't finished yet, you have to change the number j in Line 28 and remove the file you have done in resource.
-Otherwise, it will duplicate.
-
-If you have any question, just ask me, THX!
+5.
