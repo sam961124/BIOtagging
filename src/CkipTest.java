@@ -25,7 +25,7 @@ public class CkipTest {
 
 	 }
 	 public static void main(String[] args) {
-int j =0;
+int j =1;
 for(File docFile : new File("resource/").listFiles()){
 j++;
 	        WordSegmentationService c; //宣告一個class變數c

@@ -1,0 +1,30 @@
+O-P	w[0]=如	w[1]=題	pos[0]=P	pos[1]=N	__BOS__
+O-N	w[-1]=如	w[0]=題	w[1]=請問	pos[-1]=P	pos[0]=N	pos[1]=Vt	
+O-Vt	w[-1]=題	w[0]=請問	w[1]=這	pos[-1]=N	pos[0]=Vt	pos[1]=DET	
+O-DET	w[-1]=請問	w[0]=這	w[1]=兩	pos[-1]=Vt	pos[0]=DET	pos[1]=DET	
+O-DET	w[-1]=這	w[0]=兩	w[1]=者	pos[-1]=DET	pos[0]=DET	pos[1]=N	
+O-N	w[-1]=兩	w[0]=者	w[1]=最	pos[-1]=DET	pos[0]=N	pos[1]=ADV	
+O-ADV	w[-1]=者	w[0]=最	w[1]=大	pos[-1]=N	pos[0]=ADV	pos[1]=Vi	
+O-Vi	w[-1]=最	w[0]=大	w[1]=差別	pos[-1]=ADV	pos[0]=Vi	pos[1]=N	
+O-N	w[-1]=大	w[0]=差別	w[1]=在	pos[-1]=Vi	pos[0]=N	pos[1]=P	
+O-P	w[-1]=差別	w[0]=在	w[1]=哪	pos[-1]=N	pos[0]=P	pos[1]=DET	
+O-DET	w[-1]=在	w[0]=哪	w[1]=呢	pos[-1]=P	pos[0]=DET	pos[1]=T	
+O-T	w[-1]=哪	w[0]=呢	w[1]=?	pos[-1]=DET	pos[0]=T	pos[1]=QUESTIONCATEGORY	
+O-QUESTIONCATEGORY	w[-1]=呢	w[0]=?	w[1]=菜花	pos[-1]=T	pos[0]=QUESTIONCATEGORY	pos[1]=N	
+O-N	w[-1]=?	w[0]=菜花	w[1]=初期	pos[-1]=QUESTIONCATEGORY	pos[0]=N	pos[1]=N	
+O-N	w[-1]=菜花	w[0]=初期	w[1]=會	pos[-1]=N	pos[0]=N	pos[1]=ADV	
+O-ADV	w[-1]=初期	w[0]=會	w[1]=癢	pos[-1]=N	pos[0]=ADV	pos[1]=Vi	
+O-Vi	w[-1]=會	w[0]=癢	w[1]=會	pos[-1]=ADV	pos[0]=Vi	pos[1]=ADV	
+O-ADV	w[-1]=癢	w[0]=會	w[1]=痛	pos[-1]=Vi	pos[0]=ADV	pos[1]=Vi	
+O-Vi	w[-1]=會	w[0]=痛	w[1]=之類	pos[-1]=ADV	pos[0]=Vi	pos[1]=POST	
+O-POST	w[-1]=痛	w[0]=之類	w[1]=的	pos[-1]=Vi	pos[0]=POST	pos[1]=T	
+O-T	w[-1]=之類	w[0]=的	w[1]=嬤	pos[-1]=POST	pos[0]=T	pos[1]=b	
+O-b	w[-1]=的	w[0]=嬤	w[1]=?	pos[-1]=T	pos[0]=b	pos[1]=QUESTIONCATEGORY	
+O-QUESTIONCATEGORY	w[-1]=嬤	w[0]=?	w[1]=?	pos[-1]=b	pos[0]=QUESTIONCATEGORY	pos[1]=QUESTIONCATEGORY	
+O-QUESTIONCATEGORY	w[-1]=?	w[0]=?	w[1]=麻煩	pos[-1]=QUESTIONCATEGORY	pos[0]=QUESTIONCATEGORY	pos[1]=Vt	
+O-Vt	w[-1]=?	w[0]=麻煩	w[1]=醫生	pos[-1]=QUESTIONCATEGORY	pos[0]=Vt	pos[1]=N	
+O-N	w[-1]=麻煩	w[0]=醫生	w[1]=了	pos[-1]=Vt	pos[0]=N	pos[1]=T	
+O-T	w[-1]=醫生	w[0]=了	w[1]=謝謝	pos[-1]=N	pos[0]=T	pos[1]=Vt	
+O-Vt	w[-1]=了	w[0]=謝謝	w[1]=:	pos[-1]=T	pos[0]=Vt	pos[1]=COLONCATEGORY	
+O-COLONCATEGORY	w[-1]=謝謝	w[0]=:	w[1]=)	pos[-1]=Vt	pos[0]=COLONCATEGORY	pos[1]=PARENTHESISCATEGORY	
+O-PARENTHESISCATEGORY	w[-1]=:	w[0]=)	pos[-1]=COLONCATEGORY	pos[0]=PARENTHESISCATEGORY	__EOS__
